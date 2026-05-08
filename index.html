@@ -55,8 +55,15 @@
     }
 
     .meta {
-      margin-bottom: 10px;
-      color: #444;
+      display: inline-block;
+      margin-right: 24px;
+      vertical-align: top;
+    }
+    
+    .trip ul {
+      display: inline-block;
+      margin: 0;
+      vertical-align: top;
     }
 
     .gallery {
@@ -121,24 +128,7 @@
       text-shadow:
       0 2px 10px rgba(0,0,0,0.5);
     }
-
-    .trip-details {
-      display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      align-items: flex-start;
-      margin: 14px 0;
-    }
     
-    .trip-details ul {
-      margin: 0;
-      padding-left: 18px;
-    }
-    
-    .trip-details .meta {
-      white-space: nowrap;
-      color: #444;
-    }
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
@@ -151,7 +141,6 @@
       <!-- 🌊 SMART TRAVEL — Vikend na Lago di Garda -->
       <div class="trip">
       <h2>SMART TRAVEL — Vikend na Lago di Garda</h2>
-      <div class="trip-details">
         <div class="meta">
           📅 19.9.-20.9.2026. <br>
           💰 160 € <br>
@@ -164,7 +153,6 @@
           <li>Monte Baldo</li>
           <li>Riva del Garda</li>
         </ul>
-      </div>
       
       <a class="button"
         href="https://smart-travel.hr/tours/vikend-na-lago-di-garda-limone-sul-garda-i-monte-baldo/"
