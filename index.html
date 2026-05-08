@@ -78,81 +78,101 @@
     }
 
     .hero {
-      position: relative;
-      min-height: 420px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      overflow: hidden;
-      padding: 40px 20px;
-    }
-    
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-    
-      background:
-        linear-gradient(rgba(15,23,42,0.45), rgba(15,23,42,0.7)),
-    
-        url("https://lostontheroute.com/wp-content/uploads/2020/11/braies.jpg?q=80&w=1600") center/cover,
-    
-        url("https://pohcdn.com/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/Luzern-1.jpg?q=80&w=1600") center/cover,
-    
-        url("https://blog.tours4fun.com/wp-content/uploads/2016/07/autumn_bratislava.jpg?q=80&w=1600") center/cover,
-    
-        url("https://www.ignas.com/it/blog/wp-content/uploads/bfi_thumb/limone-lago-garda-hd-7dr7py2i8ky7vk3buffacf2na3n6agvagk83pzqmwxc.jpg?q=80&w=1600") center/cover;
-    
-      background-blend-mode:
-        multiply,
-        screen,
-        lighten,
-        overlay,
-        normal;
-    
-      filter: saturate(1.1) contrast(1.05);
-      transform: scale(1.03);
-    
-      z-index: 0;
-    }
-    
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        radial-gradient(circle at top left, rgba(255,255,255,0.15), transparent 40%),
-        radial-gradient(circle at bottom right, rgba(255,180,80,0.15), transparent 35%);
-      z-index: 1;
-    }
-    
-    .hero h1,
-    .hero p {
-      position: relative;
-      z-index: 2;
-    }
-    
-    .hero h1 {
-      margin: 0;
-      font-size: clamp(2.8rem, 6vw, 5rem);
-      text-shadow: 0 4px 20px rgba(0,0,0,0.6);
-    }
-    
-    .hero p {
-      font-size: 1.3rem;
-      margin-top: 12px;
-      text-shadow: 0 2px 12px rgba(0,0,0,0.7);
-    }
+  position: relative;
+  min-height: 420px;
+  overflow: hidden;
+  color: white;
+  background: #0f172a;
+}
+
+.hero-collage {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 6px;
+  transform: scale(1.02);
+}
+
+.hero-collage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(1.08) contrast(1.05);
+}
+
+.hero-collage img:first-child {
+  grid-row: span 2;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(15,23,42,0.75), rgba(15,23,42,0.35)),
+    linear-gradient(0deg, rgba(15,23,42,0.55), rgba(15,23,42,0.05));
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  text-align: left;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.hero p {
+  font-size: 1.35rem;
+  margin-top: 10px;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.7);
+}
+
+@media (max-width: 700px) {
+  .hero-collage {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-collage img:first-child {
+    grid-column: span 2;
+    grid-row: auto;
+  }
+
+  .hero-content {
+    text-align: center;
+    padding: 30px 20px;
+  }
+}
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
 <body>
   <header class="hero">
-    <h1>🏔️ Izleti 2026.</h1>
-    <p>Prijedlozi za jesen</p>
+    <div class="hero-collage">
+      <img src="https://lostontheroute.com/wp-content/uploads/2020/11/braies.jpg?q=80&w=1600">
+      <img src="https://www.ignas.com/it/blog/wp-content/uploads/bfi_thumb/limone-lago-garda-hd-7dr7py2i8ky7vk3buffacf2na3n6agvagk83pzqmwxc.jpg?q=80&w=1600">
+      <img src="https://pohcdn.com/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/Luzern-1.jpg?q=80&w=1600">
+      <img src="https://www.sunflowerhostel.com/wp-content/uploads/2024/06/duomo-di-milano.jpg?q=80&w=1600">
+      <img src="https://blog.tours4fun.com/wp-content/uploads/2016/07/autumn_bratislava.jpg?q=80&w=1600">
+    </div>
+
+    <div class="hero-content">
+      <h1>🏔️ Izleti 2026.</h1>
+      <p>Prijedlozi za jesen</p>
+    </div>
   </header>
 
   <div class="container">
