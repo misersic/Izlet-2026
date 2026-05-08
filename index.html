@@ -76,11 +76,81 @@
     ul {
       padding-left: 20px;
     }
+
+    .hero {
+      position: relative;
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      overflow: hidden;
+      padding: 40px 20px;
+    }
+    
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+    
+      background:
+        linear-gradient(rgba(15,23,42,0.45), rgba(15,23,42,0.7)),
+    
+        url("https://lostontheroute.com/wp-content/uploads/2020/11/braies.jpg?q=80&w=1600") center/cover,
+    
+        url("https://pohcdn.com/sites/default/files/styles/paragraph__live_banner__lb_image__1880bp/public/live_banner/Luzern-1.jpg?q=80&w=1600") center/cover,
+    
+        url("https://blog.tours4fun.com/wp-content/uploads/2016/07/autumn_bratislava.jpg?q=80&w=1600") center/cover,
+    
+        url("https://www.ignas.com/it/blog/wp-content/uploads/bfi_thumb/limone-lago-garda-hd-7dr7py2i8ky7vk3buffacf2na3n6agvagk83pzqmwxc.jpg?q=80&w=1600") center/cover;
+    
+      background-blend-mode:
+        multiply,
+        screen,
+        lighten,
+        overlay,
+        normal;
+    
+      filter: saturate(1.1) contrast(1.05);
+      transform: scale(1.03);
+    
+      z-index: 0;
+    }
+    
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at top left, rgba(255,255,255,0.15), transparent 40%),
+        radial-gradient(circle at bottom right, rgba(255,180,80,0.15), transparent 35%);
+      z-index: 1;
+    }
+    
+    .hero h1,
+    .hero p {
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(2.8rem, 6vw, 5rem);
+      text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    }
+    
+    .hero p {
+      font-size: 1.3rem;
+      margin-top: 12px;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.7);
+    }
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
 <body>
-  <header>
+  <header class="hero">
     <h1>🏔️ Izleti 2026.</h1>
     <p>Prijedlozi za jesen</p>
   </header>
@@ -92,8 +162,8 @@
     <h2>SMART TRAVEL — Vikend na Lago di Garda</h2>
     
     <div class="meta">
-      📅 DATUM <br>
-      💰 CIJENA <br>
+      📅 19.9.-20.9.2026. <br>
+      💰 160 € <br>
       🚍 Zagreb / Rijeka
     </div>
     
@@ -107,7 +177,7 @@
     <a class="button"
        href="https://smart-travel.hr/tours/vikend-na-lago-di-garda-limone-sul-garda-i-monte-baldo/"
        target="_blank">
-       Agencija
+       Više informacija
     </a>
     
     <div class="gallery">
@@ -138,8 +208,8 @@
     <h2>MONDO TRAVEL — Milano i talijanska jezera</h2>
     
     <div class="meta">
-      📅 30.10.2026. <br>
-      💰 FIRST MINUTE <br>
+      📅 30.10.- 1.11.2026. <br>
+      💰 230 € <br>
       🚍 Zagreb / Karlovac / Rijeka
     </div>
     
@@ -152,7 +222,7 @@
     <a class="button"
        href="https://www.mondotravel.hr/putovanje-autobusom-milano-i-talijanska-jezera.html"
        target="_blank">
-       Agencija
+       Više informacija
     </a>
     
     <div class="gallery">
@@ -191,7 +261,7 @@
     
     <div class="meta">
       📅 27.10. – 01.11.2026. <br>
-      💰 CIJENA <br>
+      💰 od 1.050,00 € <br>
       🚍 Krk / Rijeka / Zagreb
     </div>
     
@@ -205,7 +275,7 @@
     <a class="button"
        href="https://arrivatravel.hr/aranzmani/krstarenja/krstarenje-dunavom-grupni-polazak-iz-krka-rijeke-i-zagreba-jesen-2026"
        target="_blank">
-       Agencija
+       Više informacija
     </a>
     
     <div class="gallery">
@@ -259,7 +329,7 @@
     <a class="button"
        href="https://www.integral-zagreb.hr/hr/svicarska-4-dana-autobusom"
        target="_blank">
-       Agencija
+       Više informacija
     </a>
     
     <div class="gallery">
@@ -305,7 +375,11 @@
         <li>Marmolada</li>
       </ul>
 
-      <a class="button" href="https://smart-travel.hr/tours/dolomiti-lago-di-braies-ortisei-marmolada/" target="_blank">Više informacija</a>
+      <a class="button" 
+        href="https://smart-travel.hr/tours/dolomiti-lago-di-braies-ortisei-marmolada/" 
+        target="_blank">
+        Više informacija
+      </a>
 
       <div class="gallery">
         <a href="https://lostontheroute.com/wp-content/uploads/2020/11/braies.jpg?q=80&w=1600" class="glightbox" data-gallery="dolomiti">
@@ -341,7 +415,11 @@
         <li>Brenta Dolomiti</li>
       </ul>
 
-      <a class="button" href="https://smart-travel.hr/tours/trentino_dolomiti/" target="_blank">Više informacija</a>
+      <a class="button" 
+        href="https://smart-travel.hr/tours/trentino_dolomiti/" 
+        target="_blank">
+        Više informacija
+      </a>
 
       <div class="gallery">
         <a href="https://www.visittrentino.info/assets-database/32000-32999/32200-32299/965764/image-thumb__965764__contentgallery/val-di-sole---val-di-rabbi---panorama_32249.8d046c43.jpg?q=80&w=1600" class="glightbox" data-gallery="dolomiti">
