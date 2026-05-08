@@ -100,20 +100,19 @@
     }
 
      .hero {
-      min-height: 420px;
-      padding: 40px 20px;
-      color: white;
-      text-align: center;
+      position: relative;
+    }
+    
+    .hero-text {
+      position: absolute;
+      inset: 0;
+    
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
     
-      background:
-        linear-gradient(rgba(15,23,42,0.28), rgba(15,23,42,0.45)),
-        url("images/header-izleti.jpg");
-    
-      background-size: cover;
-      background-position: center 25%;
+      color: white;
     }
     
     .hero h1 {
@@ -128,12 +127,20 @@
       text-shadow:
       0 2px 10px rgba(0,0,0,0.5);
     }
+
+    .hero img {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+    }
     
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
 <body>
-  <header class="hero"> </header>
+  <header class="hero">
+    <img src="images/header-izleti-2026-v2.jpg" alt="Izleti 2026">    
+  </header>
 
   <div class="container">
 
