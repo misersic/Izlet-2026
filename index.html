@@ -6,126 +6,125 @@
   <title>Izleti 2026.</title>
   <style>
     body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f5f5f5;
-  color: #222;
-  line-height: 1.5;
-}
-
-header {
-  color: white;
-  padding: 30px;
-  text-align: center;
-}
-
-.container {
-  margin: auto;
-  padding: 20px;
-}
-
-.hero {
-  margin-bottom: 30px;
-  padding: 0;
-}
-
-.hero img {
-  width: 100%;
-  display: block;
-  border-radius: 18px;
-}
-
-.trips-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  gap: 24px;
-}
-
-.trip {
-  padding: 16px;
-  background: white;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  align-items: start;
-}
-
-.trip:hover {
-  transform: translateY(-4px);
-}
-
-.trip h2,
-.gallery {
-  grid-column: 1 / -1;
-}
-
-.trip h2 {
-  margin: 10px 0;
-  color: #0f172a;
-}
-
-.meta {
-  margin: 10px 0;
-}
-
-.trip ul {
-  margin: 10px 0;
-  padding-left: 20px;
-}
-
-.button {
-  display: inline-block;
-  width: fit-content;
-  padding: 10px 14px;
-  background: #2563eb;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-}
-
-.map-button {
-  background: #16a34a;
-  justify-self: end;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  margin-top: 15px;
-}
-
-.gallery a img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.2s ease;
-}
-
-.gallery a img:hover {
-  transform: scale(1.03);
-}
-
-@media (max-width: 600px) {
-  .trip {
-    grid-template-columns: 1fr;
-  }
-
-  .map-button {
-    justify-self: start;
-  }
-
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f5f5f5;
+      color: #222;
+      line-height: 1.5;
+    }
     
+    header {
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+    
+    .container {
+      margin: auto;
+      padding: 20px;
+    }
+    
+    .hero {
+      margin-bottom: 30px;
+      padding: 0;
+    }
+    
+    .hero img {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+    }
+    
+    .trips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 24px;
+    }
+    
+    .trip {
+      padding: 16px;
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
+    
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+    
+    .trip:hover {
+      transform: translateY(-4px);
+    }
+    
+    .trip h2,
+    .gallery {
+      grid-column: 1 / -1;
+    }
+    
+    .trip h2 {
+      margin: 10px 0;
+      color: #0f172a;
+    }
+    
+    .meta {
+      margin: 10px 0;
+    }
+    
+    .trip ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    
+    .button {
+      display: inline-block;
+      width: fit-content;
+      padding: 10px 14px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    
+    .map-button {
+      background: #16a34a;
+      justify-self: end;
+    }
+    
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 15px;
+    }
+    
+    .gallery a img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.2s ease;
+    }
+    
+    .gallery a img:hover {
+      transform: scale(1.03);
+    }
+    
+    @media (max-width: 600px) {
+      .trip {
+        grid-template-columns: 1fr;
+      }
+    
+      .map-button {
+        justify-self: start;
+      }
+    
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }    
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
