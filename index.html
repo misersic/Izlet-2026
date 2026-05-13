@@ -13,19 +13,13 @@ body {
   margin: 0;
   color: #433513;
   line-height: 1.5;
-
-  background:
-    linear-gradient(rgba(255,255,255,0.08), rgba(255,255,255,0.08)),
-    url("autumn-leaves-repeat.png");
-
-  background-size: 420px;
-  background-repeat: repeat;
-  background-position: center top;
+  background: #f8efe1;
 }
 
 .page-bg-top {
   background:
-    url("autumn-master-texture.png") top center / 100% auto no-repeat;
+    url("autumn-master-texture.png") top center / 100% auto no-repeat,
+    url("autumn-leaves-repeat.png") center top / 100% auto repeat-y;
 }
 
 .container {
@@ -536,12 +530,10 @@ body {
     });
   </script>
   <script>
-    <script>
-      window.addEventListener("scroll", () => {
-        document.body.style.backgroundPosition =
-          `center ${window.scrollY * 0.15}px`;
-      });
+    window.addEventListener("scroll", () => {
+      document.body.style.backgroundPosition =
+        `center ${window.scrollY * 0.15}px`;
+    });
 </script>
-    </script>
 </body>
 </html>
