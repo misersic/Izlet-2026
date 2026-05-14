@@ -8,22 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <title>Izleti 2026.</title>
   <style>
-body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  color: #433513;
-  line-height: 1.5;
-  background: #f8efe1;
-}
-
-body {
-  margin: 0;
-  background: #f8efe1;
-  font-family: 'Inter', sans-serif;
-  color: #433513;
-  line-height: 1.5;
-}
-
+    
 body {
   margin: 0;
   background: #f8efe1;
@@ -35,14 +20,20 @@ body {
 .page-bg-top {
   background:
     linear-gradient(
-      rgba(255,255,255,0.18),
-      rgba(255,255,255,0.18)
+      to bottom,
+      rgba(248,239,225,0) 0px,
+      rgba(248,239,225,0) 430px,
+      rgba(248,239,225,0.85) 560px,
+      rgba(248,239,225,0) 700px
     ),
-    url("autumn-leaves.png") top center / 100% auto no-repeat,
-    url("leaves-extension.png") center bottom / 100% auto repeat-y,
-    #f8efe1;
 
-  background-position: center top;
+    url("autumn-leaves.png")
+    top center / 100% auto no-repeat,
+
+    url("leaves-extension.png")
+    center 480px / 100% auto repeat-y,
+
+    #f8efe1;
 }
 
 .container {
