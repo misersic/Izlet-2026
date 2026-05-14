@@ -602,10 +602,11 @@ body {
     </script>  
     <script>
       window.addEventListener("scroll", () => {
-        const y = window.scrollY * 0.25;
+        const y = window.scrollY * 1;
+        const bg = document.querySelector(".page-bg-top");
       
-        document.querySelector(".page-bg-top").style.backgroundPosition =
-          `center ${y}px, center top`;
+        bg.style.backgroundPosition =
+          `center ${y}px, center ${y}px, center top`;
       });
     </script>
   </body>
