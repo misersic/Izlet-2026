@@ -16,7 +16,20 @@ body {
   background: #f8efe1;
 }
 
-.page-bg-top {
+body {
+  margin: 0;
+  background: #f8efe1;
+  font-family: 'Inter', sans-serif;
+  color: #433513;
+  line-height: 1.5;
+}
+
+.hero-bg {
+  position: fixed;
+  inset: 0 0 auto 0;
+
+  height: 520px;
+
   background:
     linear-gradient(
       rgba(255,255,255,0.18),
@@ -26,12 +39,20 @@ body {
 
   background-position: center top;
   background-repeat: no-repeat;
+  background-size: 100% auto;
 
-  background-size: 115% auto;
+  z-index: -1;
+  pointer-events: none;
+}
 
-  background-attachment: fixed;
+.page-bg-top {
+  background: #f8efe1;
+}
 
-  background-color: #f8efe1;
+.container {
+  position: relative;
+  margin: auto;
+  padding: 300px 20px 20px;
 }
 
 .container {
@@ -193,6 +214,7 @@ body {
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
   <body>  
+    <div class="hero-bg"></div>
     <div class="page-bg-top">
       <div class="container">  
         <div class="trips-grid">
