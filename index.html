@@ -18,11 +18,23 @@ body {
 
 .page-bg-top {
   background:
-    linear-gradient(rgba(255,255,255,0.22), rgba(255,255,255,0.22)),
+    linear-gradient(
+      rgba(255,255,255,0.14),
+      rgba(255,255,255,0.22)
+    ),
+
     url("autumn-leaves-texture.png") top center / 100% auto no-repeat,
-    url("autumn-leaves-repeat.png") center top / 100% auto repeat-y;
+
+    url("autumn-leaves-repeat.png") center top / 1400px auto repeat-y;
 
   background-color: #f8efe1;
+
+  background-attachment:
+    scroll,
+    fixed,
+    fixed;
+
+  image-rendering: auto;
 }
 
 .container {
@@ -45,16 +57,25 @@ body {
   align-content: start;
 
   padding: 16px;
-  background: rgba(255,255,255,0.92);
+
+  background: rgba(255,255,255,0.94);
+
   border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 8px 30px rgba(80,40,10,0.10);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  box-shadow:
+    0 8px 30px rgba(80,40,10,0.10);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .trip:hover {
   transform: translateY(-4px);
-  box-shadow: 0 14px 40px rgba(80,40,10,0.14);
+
+  box-shadow:
+    0 14px 40px rgba(80,40,10,0.14);
 }
 
 .trip h2,
@@ -64,40 +85,56 @@ body {
 
 .trip h2 {
   margin: 6px 0 10px;
+
   font-size: 1.5rem;
   line-height: 1.25;
   font-weight: 700;
   letter-spacing: -0.02em;
+
   color: #2f2410;
 }
 
 .meta {
   margin: 10px 0;
+
   font-size: 0.98rem;
   line-height: 1.8;
 }
 
 .trip ul {
   margin: 10px 0;
+
   padding-left: 70px;
+
   line-height: 1.7;
 }
 
 .button {
   display: inline-block;
   width: fit-content;
+
   padding: 10px 14px;
+
   background: #4f79a4;
   color: white;
+
   text-decoration: none;
   border-radius: 10px;
-  box-shadow: 0 4px 14px rgba(40,30,10,0.22);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+
+  box-shadow:
+    0 4px 14px rgba(40,30,10,0.22);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
 
 .button:hover {
   transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(40,30,10,0.28);
+
+  box-shadow:
+    0 6px 18px rgba(40,30,10,0.28);
 }
 
 .map-button {
@@ -108,6 +145,7 @@ body {
 .gallery {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
   gap: 12px;
   margin-top: 15px;
 }
@@ -115,9 +153,13 @@ body {
 .gallery a img {
   width: 100%;
   height: 140px;
+
   object-fit: cover;
   border-radius: 12px;
-  transition: transform 0.2s ease, filter 0.2s ease;
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
 }
 
 .gallery a img:hover {
@@ -126,6 +168,7 @@ body {
 }
 
 @media (max-width: 600px) {
+
   .container {
     padding: 180px 20px 20px;
   }
