@@ -9,184 +9,184 @@
   <title>Izleti 2026.</title>
   <style>
     
-body {
-  margin: 0;
-  background: #f8efe1;
-  font-family: 'Inter', sans-serif;
-  color: #433513;
-  line-height: 1.5;
-}
-
-.page-bg-top {
-  background:
-    url("autumn-leaves.png") top center / 100% auto no-repeat,
-    url("leaves-extension.png") center 820px / 100% auto no-repeat,
-    url("leaves-extension.png") center 1400px / 105% auto repeat-y,
-    #f8efe1;
-
-  background-attachment:
-    fixed,
-    scroll,
-    scroll,
-    scroll;
-}
-
-.container {
-  position: relative;
-  z-index: 2;
-
-  margin: auto;
-  padding: 400px 20px 20px;
-}
+    body {
+      margin: 0;
+      background: #f8efe1;
+      font-family: 'Inter', sans-serif;
+      color: #433513;
+      line-height: 1.5;
+    }
     
-.trips-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  gap: 24px;
-  align-items: start;
-}
-
-.trip {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  align-items: start;
-  align-content: start;
-
-  padding: 16px;
-
-  background: rgba(255,255,255,0.94);
-
-  border-radius: 18px;
-  overflow: hidden;
-
-  box-shadow:
-    0 8px 30px rgba(80,40,10,0.10);
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-.trip:hover {
-  transform: translateY(-4px);
-
-  box-shadow:
-    0 14px 40px rgba(80,40,10,0.14);
-}
-
-.trip h2,
-.gallery {
-  grid-column: 1 / -1;
-}
-
-.trip h2 {
-  margin: 6px 0 10px;
-
-  font-size: 1.5rem;
-  line-height: 1.25;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-
-  color: #2f2410;
-}
-
-.meta {
-  margin: 10px 0;
-
-  font-size: 0.98rem;
-  line-height: 1.8;
-}
-
-.trip ul {
-  margin: 10px 0;
-
-  padding-left: 70px;
-
-  line-height: 1.7;
-}
-
-.button {
-  display: inline-block;
-  width: fit-content;
-
-  padding: 10px 14px;
-
-  background: #4f79a4;
-  color: white;
-
-  text-decoration: none;
-  border-radius: 10px;
-
-  box-shadow:
-    0 4px 14px rgba(40,30,10,0.22);
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background 0.2s ease;
-}
-
-.button:hover {
-  transform: translateY(-1px);
-
-  box-shadow:
-    0 6px 18px rgba(40,30,10,0.28);
-}
-
-.map-button {
-  background: #c89b3c;
-  justify-self: end;
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: 12px;
-  margin-top: 15px;
-}
-
-.gallery a img {
-  width: 100%;
-  height: 140px;
-
-  object-fit: cover;
-  border-radius: 12px;
-
-  transition:
-    transform 0.2s ease,
-    filter 0.2s ease;
-}
-
-.gallery a img:hover {
-  transform: scale(1.03);
-  filter: saturate(1.05);
-}
-
-@media (max-width: 600px) {
-
-  .container {
-    padding: 180px 20px 20px;
-  }
-
-  .trips-grid,
-  .trip {
-    grid-template-columns: 1fr;
-  }
-
-  .trip ul {
-    padding-left: 20px;
-  }
-
-  .map-button {
-    justify-self: start;
-  }
-
-  .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
+    .page-bg-top {
+      background:
+        url("autumn-leaves.png") top center / 100% auto no-repeat,
+        url("leaves-extension.png") center 820px / 100% auto no-repeat,
+        url("leaves-extension.png") center 1400px / 105% auto repeat-y,
+        #f8efe1;
+    
+      background-attachment:
+        fixed,
+        scroll,
+        scroll,
+        scroll;
+    }
+    
+    .container {
+      position: relative;
+      z-index: 2;
+    
+      margin: auto;
+      padding: 400px 20px 20px;
+    }
+        
+    .trips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+      gap: 24px;
+      align-items: start;
+    }
+    
+    .trip {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      align-items: start;
+      align-content: start;
+    
+      padding: 16px;
+    
+      background: rgba(255,255,255,0.94);
+    
+      border-radius: 18px;
+      overflow: hidden;
+    
+      box-shadow:
+        0 8px 30px rgba(80,40,10,0.10);
+    
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+    
+    .trip:hover {
+      transform: translateY(-4px);
+    
+      box-shadow:
+        0 14px 40px rgba(80,40,10,0.14);
+    }
+    
+    .trip h2,
+    .gallery {
+      grid-column: 1 / -1;
+    }
+    
+    .trip h2 {
+      margin: 6px 0 10px;
+    
+      font-size: 1.5rem;
+      line-height: 1.25;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    
+      color: #2f2410;
+    }
+    
+    .meta {
+      margin: 10px 0;
+    
+      font-size: 0.98rem;
+      line-height: 1.8;
+    }
+    
+    .trip ul {
+      margin: 10px 0;
+    
+      padding-left: 70px;
+    
+      line-height: 1.7;
+    }
+    
+    .button {
+      display: inline-block;
+      width: fit-content;
+    
+      padding: 10px 14px;
+    
+      background: #4f79a4;
+      color: white;
+    
+      text-decoration: none;
+      border-radius: 10px;
+    
+      box-shadow:
+        0 4px 14px rgba(40,30,10,0.22);
+    
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+    }
+    
+    .button:hover {
+      transform: translateY(-1px);
+    
+      box-shadow:
+        0 6px 18px rgba(40,30,10,0.28);
+    }
+    
+    .map-button {
+      background: #c89b3c;
+      justify-self: end;
+    }
+    
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    
+      gap: 12px;
+      margin-top: 15px;
+    }
+    
+    .gallery a img {
+      width: 100%;
+      height: 140px;
+    
+      object-fit: cover;
+      border-radius: 12px;
+    
+      transition:
+        transform 0.2s ease,
+        filter 0.2s ease;
+    }
+    
+    .gallery a img:hover {
+      transform: scale(1.03);
+      filter: saturate(1.05);
+    }
+    
+    @media (max-width: 600px) {
+    
+      .container {
+        padding: 180px 20px 20px;
+      }
+    
+      .trips-grid,
+      .trip {
+        grid-template-columns: 1fr;
+      }
+    
+      .trip ul {
+        padding-left: 20px;
+      }
+    
+      .map-button {
+        justify-self: start;
+      }
+    
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
@@ -199,7 +199,7 @@ body {
           <div class="trip">
           <h2><strong>SMART TRAVEL</strong> — Vikend na Lago di Garda</h2>
             <div class="meta">
-              📅 19.9.-20.9.2026. <br>
+              📅 19.9.-20.9.2026.<br>
               💰 160 € <br>
               🚍 Zagreb / Rijeka
             </div>
@@ -211,43 +211,43 @@ body {
               <li>Monte Baldo</li>          
             </ul>
           
-          <a class="button"
-            href="https://smart-travel.hr/tours/vikend-na-lago-di-garda-limone-sul-garda-i-monte-baldo/"
-            target="_blank">
-            Više informacija
-          </a>
-    
-          <a class="button map-button"
-            href="https://www.google.com/maps/d/edit?mid=1tf94L-HJq5o4_NQKPmJfGG2JLr8WFBs&usp=sharing"
-            target="_blank">
-            Karta puta
-          </a>
+            <a class="button"
+              href="https://smart-travel.hr/tours/vikend-na-lago-di-garda-limone-sul-garda-i-monte-baldo/"
+              target="_blank">
+              Više informacija
+            </a>
+      
+            <a class="button map-button"
+              href="https://www.google.com/maps/d/edit?mid=1tf94L-HJq5o4_NQKPmJfGG2JLr8WFBs&usp=sharing"
+              target="_blank">
+              Karta puta
+            </a>
+              
+            <div class="gallery">
+      
+              <a href="https://www.traveler.com/wp-content/uploads/2024/02/Sirmione-2.jpg?q=80&w=1600"
+                class="glightbox"
+                data-gallery="garda">
+                <img src="https://www.traveler.com/wp-content/uploads/2024/02/Sirmione-2.jpg?q=80&w=800" alt="Garda">
+              </a>
+              <a href="https://www.ignas.com/it/blog/wp-content/uploads/bfi_thumb/limone-lago-garda-hd-7dr7py2i8ky7vk3buffacf2na3n6agvagk83pzqmwxc.jpg?q=80&w=1600"
+                class="glightbox"
+                data-gallery="garda">
+                <img src="https://www.ignas.com/it/blog/wp-content/uploads/bfi_thumb/limone-lago-garda-hd-7dr7py2i8ky7vk3buffacf2na3n6agvagk83pzqmwxc.jpg?q=80&w=800" alt="Garda">
+              </a>
             
-          <div class="gallery">
-    
-            <a href="https://www.traveler.com/wp-content/uploads/2024/02/Sirmione-2.jpg?q=80&w=1600"
-              class="glightbox"
-              data-gallery="garda">
-              <img src="https://www.traveler.com/wp-content/uploads/2024/02/Sirmione-2.jpg?q=80&w=800" alt="Garda">
-            </a>
-            <a href="https://www.ignas.com/it/blog/wp-content/uploads/bfi_thumb/limone-lago-garda-hd-7dr7py2i8ky7vk3buffacf2na3n6agvagk83pzqmwxc.jpg?q=80&w=1600"
-              class="glightbox"
-              data-gallery="garda">
-              <img src="https://www.ignas.com/it/blog/wp-content/uploads/bfi_thumb/limone-lago-garda-hd-7dr7py2i8ky7vk3buffacf2na3n6agvagk83pzqmwxc.jpg?q=80&w=800" alt="Garda">
-            </a>
-          
-            <a href="https://www.funiviedelbaldo.it/images/content/flora-fauna/le-4-stagioni/04-flora-e-fauna-funivia-monte-baldo-malcesine.jpg?q=80&w=1600"
-              class="glightbox"
-              data-gallery="garda">
-              <img src="https://www.funiviedelbaldo.it/images/content/flora-fauna/le-4-stagioni/04-flora-e-fauna-funivia-monte-baldo-malcesine.jpg?q=80&w=800" alt="Malcesine">
-            </a>
-          
-            <a href="https://images.marketing-italia.eu/uploads/visitvenezia/uploads_articoli/paragrafo/20200812133837malcesine-panorama.jpg?q=80&w=1600"
-              class="glightbox"
-              data-gallery="garda">
-              <img src="https://images.marketing-italia.eu/uploads/visitvenezia/uploads_articoli/paragrafo/20200812133837malcesine-panorama.jpg?q=80&w=800" alt="Limone">
-            </a>
-          </div>
+              <a href="https://www.funiviedelbaldo.it/images/content/flora-fauna/le-4-stagioni/04-flora-e-fauna-funivia-monte-baldo-malcesine.jpg?q=80&w=1600"
+                class="glightbox"
+                data-gallery="garda">
+                <img src="https://www.funiviedelbaldo.it/images/content/flora-fauna/le-4-stagioni/04-flora-e-fauna-funivia-monte-baldo-malcesine.jpg?q=80&w=800" alt="Malcesine">
+              </a>
+            
+              <a href="https://images.marketing-italia.eu/uploads/visitvenezia/uploads_articoli/paragrafo/20200812133837malcesine-panorama.jpg?q=80&w=1600"
+                class="glightbox"
+                data-gallery="garda">
+                <img src="https://images.marketing-italia.eu/uploads/visitvenezia/uploads_articoli/paragrafo/20200812133837malcesine-panorama.jpg?q=80&w=800" alt="Limone">
+              </a>
+            </div>
           </div>
         
           <!-- 🌆 MONDO TRAVEL — Milano i talijanska jezera -->
@@ -256,7 +256,7 @@ body {
           <h2><strong>MONDO TRAVEL</strong> — Milano i talijanska jezera</h2>
           
           <div class="meta">
-            📅 30.10.- 1.11.2026. <br>
+            📅 30.10.- 1.11.2026.<br>
             💰 230 € <br>
             🚍 Zagreb / Karlovac / Rijeka
           </div>
@@ -314,7 +314,7 @@ body {
             <h2><strong>ARRIVA TRAVEL</strong> — Krstarenje Dunavom</h2>
             
             <div class="meta">
-              📅 27.10. – 01.11.2026. <br>
+              📅 27.10. – 1.11.2026.<br>
               💰 od 1.050,00 € <br>
               🚍 Krk / Rijeka / Zagreb
             </div>
@@ -373,7 +373,7 @@ body {
             <h2><strong>INTEGRAL</strong> — Švicarska 4 dana</h2>
             
             <div class="meta">
-              📅 15.10. – 18.10.2026. <br>
+              📅 15.10. – 18.10.2026.<br>
               💰 od 390 € <br>
               🚍 Zagreb / Karlovac / Rijeka
             </div>
@@ -429,7 +429,7 @@ body {
           <div class="trip">
             <h2><strong>SMART TRAVEL</strong> — Dolomiti: Lago di Braies, Ortisei, Marmolada</h2>
             <div class="meta">
-              📅 17.09. – 20.09.2026. <br>
+              📅 17.9. – 20.9.2026.<br>
               💰 466 € <br>
               🚍 Zagreb / Karlovac / Rijeka
             </div>
@@ -476,7 +476,7 @@ body {
           <div class="trip">
             <h2><strong>SMART TRAVEL</strong> — Trentino Dolomiti</h2>
             <div class="meta">
-              📅 10.09. – 13.09.2026. <br>
+              📅 10.9. – 13.9.2026.<br>
               💰 425 € <br>
               🚍 Zagreb / Karlovac / Rijeka
             </div>
@@ -522,7 +522,7 @@ body {
           <div class="trip">
             <h2><strong>INTEGRAL</strong> — Rim, Pompeji, Napoli</h2>
             <div class="meta">
-              📅 14.10. - 18.10.2026. <br>
+              📅 14.10. - 18.10.2026.<br>
               💰 €420 € <br>
               🚍 Zagreb / Karlovac / Rijeka
             </div>
