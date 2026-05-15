@@ -18,15 +18,27 @@ body {
 }
 
 .page-bg-top {
-  background:
-    url("autumn-leaves.png") top center / 100% auto no-repeat,
-    url("leaves-extension.png") center 820px / 100% auto repeat-y,
-    #f8efe1;
+  background-image:
+    url("autumn-leaves.png"),
+    url("leaves-extension.png");
+
+  background-position:
+    center top,
+    center 950px;
+
+  background-size:
+    100% auto,
+    102% auto;
+
+  background-repeat:
+    no-repeat,
+    repeat-y;
 
   background-attachment:
     fixed,
-    scroll,
     scroll;
+
+  background-color: #f8efe1;
 }
 
 .container {
