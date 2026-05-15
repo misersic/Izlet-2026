@@ -18,29 +18,22 @@ body {
 }
 
 .page-bg-top {
-  position: relative;
   background:
-    url("autumn-leaves.png") top center / 100% auto no-repeat,
-    url("leaves-extension.png") center 560px / 100% auto repeat-y,
+    linear-gradient(
+      to bottom,
+      rgba(248,239,225,0) 0px,
+      rgba(248,239,225,0) 520px,
+      rgba(248,239,225,0.75) 620px,
+      rgba(248,239,225,0) 760px
+    ),
+
+    url("autumn-leaves.png")
+    top center / 100% auto no-repeat,
+
+    url("leaves-extension.png")
+    center 560px / 100% auto repeat-y,
+
     #f8efe1;
-}
-
-.page-bg-top::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 470px;
-  height: 320px;
-  z-index: 1;
-  pointer-events: none;
-
-  background: linear-gradient(
-    to bottom,
-    rgba(248,239,225,0),
-    rgba(248,239,225,0.98),
-    rgba(248,239,225,0)
-  );
 }
 
 .container {
@@ -50,21 +43,7 @@ body {
   margin: auto;
   padding: 400px 20px 20px;
 }
-
-.container {
-  position: relative;
-  z-index: 1;
-  margin: auto;
-  padding: 300px 20px 20px;
-}
-
-.container {
-  position: relative;
-  z-index: 1;
-  margin: auto;
-  padding: 400px 20px 20px;
-}
-
+    
 .trips-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
