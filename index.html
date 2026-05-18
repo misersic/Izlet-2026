@@ -792,32 +792,35 @@
     <script src="https://npmcdn.com/flatpickr/dist/l10n/hr.js"></script>
     <script>
       document.querySelectorAll(".trip-calendar").forEach(input => {
-        const dates = JSON.parse(input.dataset.dates);
-      
-        const first = new Date(dates[0]);
-        const last = new Date(dates[dates.length - 1]);
-      
-        const sameMonth =
-          first.getFullYear() === last.getFullYear() &&
-          first.getMonth() === last.getMonth();
-      
-        const picker = flatpickr(input, {
-          mode: "multiple",
-          dateFormat: "d.m.Y.",
-          defaultDate: dates,
-          locale: "hr",
-          showMonths: sameMonth ? 1 : 2,
-          clickOpens: false,
-
-          onOpen: [
-            function(selectedDates, dateStr, instance) {
-              if (dates.length > 0) {
-                instance.jumpToDate(dates[0]);
-              }
-            }
-          ]
-        });
-
+      const dateStrings = JSON.parse(input.dataset.dates);
+    
+      const dates = dateStrings.map(d => {
+        const [year, month, day] = d.split("-").map(Number);
+        return new Date(year, month - 1, day);
+      });
+    
+      const first = dates[0];
+      const last = dates[dates.length - 1];
+    
+      const sameMonth =
+        first.getFullYear() === last.getFullYear() &&
+        first.getMonth() === last.getMonth();
+    
+      const picker = flatpickr(input, {
+        mode: "range",
+        defaultDate: dates,
+        locale: "hr",
+        dateFormat: "d.m.Y.",
+        showMonths: sameMonth ? 1 : 2,
+        clickOpens: false,
+    
+        onOpen: [
+          function(selectedDates, dateStr, instance) {
+            instance.jumpToDate(dates[0]);
+          }
+        ]
+      });
+    
       const trigger = document.querySelector(
         `.calendar-trigger[data-calendar="${input.dataset.calendar}"]`
       );
