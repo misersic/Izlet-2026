@@ -779,19 +779,26 @@
       });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://npmcdn.com/flatpickr/dist/l10n/hr.js"></script>
     <script>
       document.querySelectorAll(".calendar-trigger").forEach(trigger => {
       
         const dates = JSON.parse(trigger.dataset.dates);
+
+        const first = new Date(dates[0]);
+        const last = new Date(dates[dates.length - 1]);
+      
+        const sameMonth =
+          first.getFullYear() === last.getFullYear() &&
+          first.getMonth() === last.getMonth();
       
         flatpickr(trigger, {
-          mode: "range",
-          showMonths: 2,
+          mode: "multiple",
+          showMonths: sameMonth ? 1 : 2,
           dateFormat: "d.m.Y.",
           defaultDate: dates,
-      
-          inline: false,
-      
+          locale: "hr",
+          inline: false,      
           clickOpens: true
         });
       
