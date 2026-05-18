@@ -215,14 +215,24 @@
       background: #d97a7a;
       border-color: #d97a7a;
       color: white;
+      box-shadow: none !important;
     }
     
     .flatpickr-day.inRange {
       background: #f3c7c7;
       border-color: #f3c7c7;
       color: #5a2b2b;
+      box-shadow: none !important;
     }
-
+    
+    .flatpickr-day.startRange {
+      border-radius: 50% 0 0 50%;
+    }
+    
+    .flatpickr-day.endRange {
+      border-radius: 0 50% 50% 0;
+    }
+    
     .trip-calendar {
       position: absolute;
       opacity: 0;
