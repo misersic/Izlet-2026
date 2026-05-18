@@ -6,6 +6,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"/>
   <title>Izleti 2026.</title>
   <style>
     
@@ -207,6 +208,20 @@
           scroll;
       }    
     }
+
+    .flatpickr-day.selected,
+    .flatpickr-day.startRange,
+    .flatpickr-day.endRange {
+      background: #d97a7a;
+      border-color: #d97a7a;
+      color: white;
+    }
+    
+    .flatpickr-day.inRange {
+      background: #f3c7c7;
+      border-color: #f3c7c7;
+      color: #5a2b2b;
+    }
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
@@ -219,7 +234,15 @@
           <div class="trip">
             <h2><strong>SMART TRAVEL</strong> — Vikend na Lago di Garda</h2>
             <div class="meta">
-              📅 19.9.-20.9.2026.<br>
+              <span
+                class="calendar-trigger"
+                data-dates='["2026-09-19","2026-09-20"]'>
+                📅 19.9.-20.9.2026.
+                <span class="calendar-hint">
+                  (klik za kalendar)
+                </span>
+              </span>
+
               💰 160 € <br>
               🚍 Zagreb / Rijeka
             </div>
@@ -755,5 +778,24 @@
           `center ${y}px, center ${y}px, center top`;
       });
     </script>
+    <script>
+      document.querySelectorAll(".calendar-trigger").forEach(trigger => {
+      
+        const dates = JSON.parse(trigger.dataset.dates);
+      
+        flatpickr(trigger, {
+          mode: "range",
+          showMonths: 2,
+          dateFormat: "d.m.Y.",
+          defaultDate: dates,
+      
+          inline: false,
+      
+          clickOpens: true
+        });
+      
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   </body>
 </html>
