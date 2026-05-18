@@ -807,7 +807,15 @@
           defaultDate: dates,
           locale: "hr",
           showMonths: sameMonth ? 1 : 2,
-          clickOpens: false
+          clickOpens: false,
+
+          onOpen: [
+            function(selectedDates, dateStr, instance) {
+              if (dates.length > 0) {
+                instance.jumpToDate(dates[0]);
+              }
+            }
+          ]
         });
 
       const trigger = document.querySelector(
