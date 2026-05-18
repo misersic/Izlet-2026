@@ -222,6 +222,12 @@
       border-color: #f3c7c7;
       color: #5a2b2b;
     }
+
+    .trip-calendar {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
@@ -234,14 +240,18 @@
           <div class="trip">
             <h2><strong>SMART TRAVEL</strong> — Vikend na Lago di Garda</h2>
             <div class="meta">
-              <span
-                class="calendar-trigger"
-                data-dates='["2026-09-19","2026-09-20"]'>
+             <span class="calendar-trigger" data-calendar="garda">
                 📅 19.9.-20.9.2026.
-                <span class="calendar-hint">
-                  (klik za kalendar)
-                </span>
+                <span class="calendar-hint">(klik za kalendar)</span>
               </span>
+              
+              <input
+                type="text"
+                class="trip-calendar"
+                data-calendar="garda"
+                data-dates='["2026-09-19","2026-09-20"]'
+                readonly
+              >
 
               💰 160 € <br>
               🚍 Zagreb / Rijeka
@@ -781,10 +791,9 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="https://npmcdn.com/flatpickr/dist/l10n/hr.js"></script>
     <script>
-      document.querySelectorAll(".calendar-trigger").forEach(trigger => {
+      document.querySelectorAll(".trip-calendar").forEach(input => {
+        const dates = JSON.parse(input.dataset.dates);
       
-        const dates = JSON.parse(trigger.dataset.dates);
-
         const first = new Date(dates[0]);
         const last = new Date(dates[dates.length - 1]);
       
@@ -792,17 +801,23 @@
           first.getFullYear() === last.getFullYear() &&
           first.getMonth() === last.getMonth();
       
-        flatpickr(trigger, {
+        const picker = flatpickr(input, {
           mode: "multiple",
-          showMonths: sameMonth ? 1 : 2,
           dateFormat: "d.m.Y.",
           defaultDate: dates,
           locale: "hr",
-          inline: false,      
-          clickOpens: true
+          showMonths: sameMonth ? 1 : 2,
+          clickOpens: false
         });
-      
+
+      const trigger = document.querySelector(
+        `.calendar-trigger[data-calendar="${input.dataset.calendar}"]`
+      );
+    
+      trigger.addEventListener("click", () => {
+        picker.open();
       });
-    </script>
+    });
+</script>
   </body>
 </html>
