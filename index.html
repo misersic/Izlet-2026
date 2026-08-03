@@ -231,6 +231,62 @@
     .calendar-trigger {
       cursor: pointer;
     }
+
+    .map-link-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.map-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+/* Hidden preview */
+.map-preview {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 10px);
+  transform: translate(-50%, 6px);
+
+  width: 280px;
+  max-width: 80vw;
+  padding: 5px;
+
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease,
+    visibility 0.18s;
+
+  /* Crucial: preview cannot block the link */
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.map-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Mouse hover and keyboard focus */
+.map-link-wrapper:hover .map-preview,
+.map-link-wrapper:focus-within .map-preview {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, 0);
+}
   </style>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
   <!-- Google tag (gtag.js) -->
@@ -283,13 +339,19 @@
               target="_blank">
               Više informacija
             </a>
-      
-            <a class="button map-button"
-              href="https://www.google.com/maps/d/edit?mid=1v4o2b9qGVSHjX7A3V83z0RxylfJAwmI&usp=sharing"
-              target="_blank">
-              Karta puta
-            </a>
-              
+            <div class="map-link-wrapper">
+              <a class="button map-button"
+                href="https://www.google.com/maps/d/edit?mid=1v4o2b9qGVSHjX7A3V83z0RxylfJAwmI&usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer">
+                Karta puta
+              </a>
+               <div class="map-preview" aria-hidden="true">
+                  <img
+                    src="Slika zaslona 2026-08-03 u 15.10.32.png"
+                    alt="">
+                </div>
+             </div> 
             <div class="gallery">
 
               <a href="https://livtours.com/app/uploads/2022/09/Modena-Piazza.jpg?q=80&w=1600"
@@ -349,13 +411,20 @@
               target="_blank">
               Više informacija
             </a>
-              
+
+            <div class="map-link-wrapper">
             <a class="button map-button"
               href="https://www.google.com/maps/d/edit?mid=1IJT4mPYmGKdz8h7Ki74mK2ppe5emhOk&usp=sharing"
-              target="_blank">
+              target="_blank"
+              rel="noopener noreferrer">
               Karta puta
             </a>
-            
+            <div class="map-preview" aria-hidden="true">
+                <img
+                  src="Slika zaslona 2026-08-03 u 15.11.55.png"
+                  alt="">
+              </div>
+            </div>
             <div class="gallery">
             
               <a href="https://www.hotelastoriastresa.it/wp-content/uploads/2024/04/AdobeStock_294824183-scaled.webp?q=80&w=1600"
