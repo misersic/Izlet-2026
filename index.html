@@ -107,16 +107,6 @@
     
       line-height: 1.7;
     }
-
-    /* Left-column card: preview extends to the right */
-    .trip:nth-child(odd) .map-preview {
-        left: 0;
-    }
-    
-    /* Right-column card: preview extends to the left */
-    .trip:nth-child(even) .map-preview {
-        right: 0;
-    }
     
     .button {
       display: inline-block;
@@ -276,6 +266,7 @@
   /* Crucial: preview cannot block the link */
   pointer-events: none;
   z-index: 1000;
+  right: -250px;
 }
 
 .map-preview img {
